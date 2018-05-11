@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RecipeEdit</class>
+ <widget class="QDialog" name="RecipeEdit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>543</width>
+    <height>318</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Рецепт</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <item row="3" column="0">
+    <widget class="QLineEdit" name="fldName"/>
+   </item>
+   <item row="1" column="4" rowspan="5">
+    <widget class="QListView" name="lstAllIngredients"/>
+   </item>
+   <item row="7" column="4">
+    <widget class="QPushButton" name="btnAdd">
+     <property name="text">
+      <string>&lt;Добавить</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QTextEdit" name="fldDescription"/>
+   </item>
+   <item row="1" column="1" rowspan="5" colspan="2">
+    <widget class="QListView" name="lstAddedIngredients"/>
+   </item>
+   <item row="8" column="2" colspan="3">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QComboBox" name="fldCategory"/>
+   </item>
+   <item row="7" column="2">
+    <widget class="QPushButton" name="btnRemove">
+     <property name="text">
+      <string>Удалить&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Описание</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Категория</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Название</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>Доступные ингредиенты</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Ингредиенты для блюда</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>RecipeEdit</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>188</x>
+     <y>240</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>RecipeEdit</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>240</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
